@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { ImagesSlider } from "../components/ui/images-slider";
 import Navbar from "./Navbar";
+import { useRef } from "react";
 
 export default function Hero() {
   const images = [
@@ -9,6 +10,15 @@ export default function Hero() {
     "../images/294530.jpg",
     "../images/yellow-mazda-rx-7-long-exposure-uanzsi6t50esf4k4.jpg",
   ];
+  // Create a reference to the audio element
+  const audioRef = useRef(null);
+
+  // Function to play the car sound
+  const playCarSound = () => {
+    if (audioRef.current) {
+      audioRef.current.play();
+    }
+  };
   return (
     <>
       <Navbar />
@@ -41,12 +51,13 @@ export default function Hero() {
               powered by the legendary rotary engine.
             </span>
           </motion.p>
-          <button className="relative cursor-pointer z-0 h-12 mt-4 rounded-full backdrop-blur-sm border bg-orange-500/10 border-orange-500/20 px-6 text-neutral-50 after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-gradient-to-r after:from-orange-500 after:to-amber-300 hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500">
-            Hover me
+          <button onClick={playCarSound} className="relative font-semibold cursor-pointer z-0 h-12 mt-4 rounded-full backdrop-blur-sm border bg-orange-500/10 border-orange-500/20 px-6 text-neutral-50 after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-full after:rounded-full after:bg-gradient-to-r after:from-orange-500 after:to-amber-300 hover:after:scale-x-125 hover:after:scale-y-150 hover:after:opacity-0 hover:after:transition hover:after:duration-500">
+          Explore Now
             <div className="absolute inset-x-0 h-px -bottom-px bg-gradient-to-r w-3/4 mx-auto from-transparent via-orange-500 to-transparent" />
           </button>
         </motion.div>
       </ImagesSlider>
+      <audio ref={audioRef} src="../sounds/250942__pmartinez13__car-engine.wav" preload="auto" />
       <div className=" absolute xs:bottom-3 bottom-10 w-full flex justify-center items-center">
             <a href="#about">
               <div className=" w-[35px] h-[64px] text-white rounded-full border-2 flex justify-center items-start p-2">
