@@ -6,8 +6,10 @@ function App() {
   return (
     <BrowserRouter>
       <Hero />
-      <div className="-translate-x-0 w-full h-3 bg-orange-400 shadow-[0_0_20px_10px_#ff8d3c]"></div>
       <History />
+      <section className=" h-[300px] bg-white">
+
+      </section>
     </BrowserRouter>
   )
 }

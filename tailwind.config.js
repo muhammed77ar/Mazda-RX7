@@ -15,6 +15,12 @@ const {
     darkMode: "class",
     theme: {
       extend: {
+        backgroundImage: {
+          'gradient-to-r': 'linear-gradient(to right, var(--tw-gradient-stops))',
+        },
+        blur: {
+          'md': '8px',
+        },
         animation: {
             aurora: "aurora 60s linear infinite",
         },
