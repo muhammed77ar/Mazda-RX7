@@ -1,36 +1,159 @@
 // src/components/History.js
 import { motion } from "framer-motion";
-import { LampContainer } from "../components/ui/lamp";
+import { Timeline } from "../components/ui/timeline";
+
 
 export function History() {
+  const data = [
+    {
+      title: "1978",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            The Mazda RX-7 (first generation, SA/FB) is introduced, featuring a revolutionary 1.1L 12A rotary engine. It quickly gains attention for its lightweight design and sporty handling.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="../images/2202_rd.jpg"
+              alt="1978 Mazda RX-7"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <img
+              src="../images/12Aside.jpg"
+              alt="12A Rotary Engine"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "1985",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            The second-generation RX-7 (FC) debuts with a sleek, Porsche-esque design and a turbocharged 13B rotary engine, boosting performance and cementing its status as a driver’s car.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="../images/mazda-rx-7-1988-mazda-rx7-cars-trucks-city-of-toronto-kijiji_9124423302.jpg"
+              alt="1985 Mazda RX-7 FC"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <img
+              src="../images/screenshot_20210103_214722_instagram_0b2fa2845eaf3abb5637bb52a1c56e884cdb4ba9.jpg"
+              alt="13B Turbo Engine"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "1991",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            The third-generation RX-7 (FD) launches, featuring a stunning design and the twin-turbo 13B-REW engine, delivering 255 hp. It becomes an icon in motorsport and car culture.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="../images/cptvy8x68h371.png"
+              alt="1991 Mazda RX-7 FD"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <img
+              src="../images/GQhcCTjXoAEhsC8.jpeg"
+              alt="Twin-Turbo 13B-REW Engine"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2002",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Production of the RX-7 ends, marking the close of an era. Its legacy lives on through enthusiasts, tuners, and its influence on future Mazda designs.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="../images/Mz8Jegl7sa5GfG5fHtotuVSY6qeZiffgYeOlRq2sdkHPZ2nQ3vJ568CclKtMZWX155pOAQ4xA1MggHFEJFcfPEouZwhpUdJSp7jLyLh7Hk8.jpg"
+              alt="2002 Mazda RX-7 Final Edition"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <img
+              src="../images/nahob-studio3.jpg"
+              alt="RX-7 Legacy"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "Legacy",
+      content: (
+        <div>
+          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
+            The RX-7’s impact endures in motorsport, pop culture (e.g., Fast & Furious), and Mazda’s rotary heritage, inspiring models like the RX-8 and concepts like the RX-Vision.
+          </p>
+          <div className="mb-8">
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Iconic rotary engine innovation
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Motorsport success (IMSA, drifting)
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Cult following among enthusiasts
+            </div>
+            <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
+              ✅ Influence on modern Mazda design
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <img
+              src="../images/Toby_Thyer_Photographer_Speedhunters-114-1200x800.jpg"
+              alt="RX-7 in Motorsport"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+            <img
+              src="../images/i1-1-ts-2005211204140000.jpeg"
+              alt="RX-Vision Concept"
+              width={500}
+              height={500}
+              className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
+  ];
+
   return (
-    <LampContainer>
-      <div className="flex flex-col items-center">
-        <motion.h1
-          initial={{ opacity: 0.5, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className=" bg-gradient-to-b from-white to-amber-300 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl">
-          History & Legacy
-        </motion.h1>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.5,
-            duration: 0.8,
-            ease: "easeInOut",
-          }}
-          className="mt-6 text-center text-white text-lg max-w-3xl">
-          <p>Here's some content about the history of lamp building. Lamps have been an essential part of human civilization since ancient times, providing light and comfort in the darkness.</p>
-          <p>From oil lamps to modern LED technology, the evolution of lamps reflects our continuous quest for better illumination solutions.</p>
-          <p className=" mt-3.5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde temporibus delectus molestiae fugit reiciendis omnis culpa, accusamus, sapiente aspernatur obcaecati animi dolores laudantium maxime recusandae mollitia! Necessitatibus, dolore! Doloremque eos corporis aut placeat architecto ex sed, natus soluta pariatur facilis voluptates quidem, vero esse! Sapiente totam magni nemo repellendus exercitationem consequatur voluptatibus reprehenderit eaque nam non? Excepturi laborum veniam voluptates modi hic delectus eos ipsa consequatur saepe cupiditate eius nulla voluptas veritatis rem illo exercitationem quae, inventore sunt ab perspiciatis accusantium laboriosam mollitia harum sit? Laboriosam quae voluptates molestias dolor? Atque dolorum labore ut maxime consectetur neque sit at possimus quaerat. Possimus quia esse architecto, neque officiis inventore mollitia amet fuga ullam magni. Saepe, molestiae mollitia est cupiditate commodi eum nemo qui! Quo incidunt neque id omnis sunt atque necessitatibus magni dolorem doloribus, animi, quaerat cupiditate? Eaque tempora quis qui magnam maiores explicabo sunt quidem, facere blanditiis, recusandae autem eum totam ab modi. Repellendus laboriosam, labore ex earum excepturi inventore et architecto accusamus mollitia! Quia odit ratione laudantium eum omnis labore facere magnam vel, nobis sequi neque molestias numquam aliquid dicta nam officia iusto ducimus obcaecati et quas blanditiis assumenda explicabo. Impedit dolore ut eum quo libero a, nisi natus porro cum officia excepturi pariatur unde corporis nihil ratione delectus in tenetur molestias aut assumenda autem officiis! Aspernatur quia aut quos a reiciendis, veniam blanditiis sint explicabo nisi laboriosam facilis unde, nihil provident earum nam aliquid quam vel, et numquam laborum mollitia? Nihil veritatis, pariatur quidem nulla voluptate doloremque id libero ea voluptatum, voluptatibus, placeat ullam quae. Esse, accusantium officiis sequi cumque quisquam atque unde accusamus enim adipisci dolorem veniam distinctio temporibus ducimus voluptatibus eveniet autem quaerat minus, tempore deserunt consectetur molestiae quae. Rem repellat ipsum culpa cumque debitis repellendus quia deleniti in. Adipisci dolore dolor quos tenetur accusantium repudiandae impedit praesentium aliquam, explicabo sed illo quidem corrupti commodi laudantium ipsum, est obcaecati? At libero, velit dolorem doloremque eos dolore vero exercitationem soluta quas quaerat explicabo repudiandae adipisci corporis nemo vel vitae illo sapiente et quidem. Expedita praesentium rerum blanditiis aut excepturi. Natus, ab illo! Animi aperiam veritatis libero doloremque repellat nulla. Dicta iusto reprehenderit quae earum voluptas minima officiis at, facere perspiciatis vero laudantium corporis aliquid quos cumque in accusamus dolore placeat eum ut autem facilis! Asperiores sequi commodi enim similique, accusamus, suscipit minima non fuga unde iure natus iusto veritatis a alias quos explicabo nam quibusdam veniam tempora!</p>
-        </motion.div>
-      </div>
-    </LampContainer>
+    <div className="w-full">
+      <Timeline data={data} />
+    </div>
   );
 }
